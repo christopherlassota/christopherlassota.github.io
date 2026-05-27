@@ -44,6 +44,10 @@
             gap: 2rem;
         }
     }
+    &__icon-link {
+        @include flex-center(row);
+        text-decoration: none;
+    }
     &__quicklink-list {
         @include flex-center(column, flex-start, flex-start);
         gap: 1rem;

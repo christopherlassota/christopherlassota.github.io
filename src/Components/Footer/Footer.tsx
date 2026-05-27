@@ -1,7 +1,14 @@
 import "./Footer.scss";
-import { BsGithub, BsLinkedin, BsInstagram, BsYoutube } from "react-icons/bs";
+import { BsGithub, BsLinkedin } from "react-icons/bs";
 import { IconContext } from "react-icons";
+import type { IconType } from "react-icons";
 import { Link } from "react-router-dom";
+import { socialLinks, type SocialLinkId } from "../../data/socialLinks";
+
+const socialIconById: Record<SocialLinkId, IconType> = {
+  github: BsGithub,
+  linkedin: BsLinkedin,
+};
 
 const Footer = () => {
   return (
@@ -14,18 +21,23 @@ const Footer = () => {
         </p>
         <ul className="footer__icon-list">
           <IconContext.Provider value={{ color: "#5E5E5E", size: "24px" }}>
-            <li className="footer__icon">
-              <BsGithub />
-            </li>
-            <li className="footer__icon">
-              <BsLinkedin />
-            </li>
-            <li className="footer__icon">
-              <BsInstagram />
-            </li>
-            <li className="footer__icon">
-              <BsYoutube />
-            </li>
+            {socialLinks.map(({ id, label, href }) => {
+              const Icon = socialIconById[id];
+
+              return (
+                <li key={id} className="footer__icon">
+                  <a
+                    href={href}
+                    className="footer__icon-link"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label={label}
+                  >
+                    <Icon aria-hidden="true" />
+                  </a>
+                </li>
+              );
+            })}
           </IconContext.Provider>
         </ul>
       </section>
