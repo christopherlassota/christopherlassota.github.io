@@ -1,4 +1,5 @@
 import "./Invitations.scss";
+import { Link } from "react-router-dom";
 
 const Invitation = () => {
   return (
@@ -9,9 +10,9 @@ const Invitation = () => {
           opportunities. Flexible with remote, async and agile workflows.
           Comfortable working across time zones and with distributed teams.
         </h4>
-        <a href="#" className="invitation__link">
+        <Link to="/contact" className="invitation__link">
           <button className="invitation__button">Contact Me</button>
-        </a>
+        </Link>
     </section>
   );
 };

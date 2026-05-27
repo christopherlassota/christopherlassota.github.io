@@ -2,7 +2,14 @@ import "./Hero.scss";
 import { BsGithub } from "react-icons/bs";
 import { BsLinkedin } from "react-icons/bs";
 import { IconContext } from "react-icons";
+import type { IconType } from "react-icons";
 import { Link } from "react-router-dom";
+import { socialLinks, type SocialLinkId } from "../../data/socialLinks";
+
+const socialIconById: Record<SocialLinkId, IconType> = {
+  github: BsGithub,
+  linkedin: BsLinkedin,
+};
 
 const Hero = () => {
   return (
@@ -35,18 +42,24 @@ const Hero = () => {
         </div>
         <div className="hero__icons">
           <IconContext.Provider value={{ color: "#5E5E5E", size: "24px" }}>
-            <a href="#" className="hero__link">
-              <button className="hero__socials">
-                <BsGithub />
-                GitHub
-              </button>
-            </a>
-            <a href="#" className="hero__link">
-              <button className="hero__socials">
-            <BsLinkedin />
-                LinkedIn
-              </button>
-            </a>
+            {socialLinks.map(({ id, label, href }) => {
+              const Icon = socialIconById[id];
+
+              return (
+                <a
+                  key={id}
+                  href={href}
+                  className="hero__link"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <span className="hero__socials">
+                    <Icon aria-hidden="true" />
+                    {label}
+                  </span>
+                </a>
+              );
+            })}
           </IconContext.Provider>
         </div>
       </article>
