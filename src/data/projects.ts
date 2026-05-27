@@ -12,7 +12,7 @@ export const projects: Project[] = [
     id: "instock",
     title: "InStock",
     description:
-      "Inventory management app focused on clean CRUD flows and clear information hierarchy.",
+      "A full-stack inventory management application focused on clear CRUD workflows, responsive UI, and practical warehouse data organization.",
     tags: ["React", "TypeScript", "Sass"],
     image: "/images/InStock.png",
     featured: true,
@@ -21,7 +21,7 @@ export const projects: Project[] = [
     id: "bandsite",
     title: "Bandsite",
     description:
-      "Responsive marketing site built to practice layout systems and content hierarchy.",
+      "A responsive marketing website built from design mockups, with emphasis on layout accuracy, reusable styling, and clean content structure.",
     tags: ["JavaScript", "HTML", "CSS"],
     image: "/images/Bandsite.png",
     featured: true,
@@ -30,7 +30,7 @@ export const projects: Project[] = [
     id: "coffeeshop",
     title: "Coffee Shop",
     description:
-      "Single-page landing experience emphasizing visual rhythm and typography.",
+      "A single-page landing page focused on HTML/CSS fundamentals, spacing, typography, visual rhythm, and responsive layout.",
     tags: ["HTML", "CSS"],
     image: "/images/CoffeeShop.png",
     featured: false,

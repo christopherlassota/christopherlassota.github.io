@@ -14,6 +14,10 @@
         @include flex-center(column, flex-start, flex-start);
         // gap: 1rem;
         position: relative;
+
+        @include tablet {
+            padding-right: 12rem;
+        }
     }
 
     &__date {
@@ -25,6 +29,8 @@
         @include tablet {
             position: absolute;
             width: auto;
+            margin: 0;
+            top: 0;
             right: 0%;
         }
     }

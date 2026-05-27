@@ -6,9 +6,12 @@ const About = () => {
     return (
         <section className="about">
             <h1 className="about__title">About Me</h1>
-            <h3 className="about_subtitle">
-                Delivering robust, scalable, and user-focused solutions that drive business success
-            </h3>
+            <p className="about__subtitle">
+                I'm interested in the overlap between software, engineering, and practical problem-solving.
+            </p>
+            <p className="about__intro">
+                My background started in cellular and molecular biology, where I developed strong analytical and lab skills. I later moved into software development through hands-on project work with React, TypeScript, Node.js, Express, and SQL. I'm now pursuing engineering at the University of Calgary and looking for roles where I can combine technical curiosity, communication, and hands-on problem-solving.
+            </p>
             <Experience />
             <section className="education">
                     <h2 className="education__title">

@@ -1,0 +1,130 @@
+Tasks for my-website (20)
+
+1. Add resume PDF and link it site-wide
+- Description: Place a resume PDF in `public/` and add a Resume link in header, footer, and contact page.
+- Info Needed:
+Resume filename: 
+Preferred link label (e.g., Resume, CV): 
+
+2. Replace placeholder social links
+- Description: Update Instagram/YouTube icons to real URLs or remove the icons.
+- Info Needed:
+Instagram URL or remove icon (keep/remove): 
+YouTube URL or remove icon (keep/remove): 
+
+3. Add GitHub and Live Demo links to projects
+- Description: Add per-project GitHub and live URLs to project cards.
+- Info Needed:
+InStock GitHub URL: 
+InStock Live URL: 
+Bandsite GitHub URL: 
+Bandsite Live URL: 
+Snaps GitHub URL: 
+Snaps Live URL: 
+Wedding Website GitHub URL: 
+Wedding Website Live URL: 
+Coffee Shop GitHub URL: 
+Coffee Shop Live URL: 
+
+4. Add project outcomes/metrics
+- Description: Add 1–2 measurable outcomes per project (performance, users, process, learning outcomes).
+- Info Needed:
+InStock outcomes: 
+Bandsite outcomes: 
+Snaps outcomes: 
+Wedding Website outcomes: 
+Coffee Shop outcomes: 
+
+5. Convert project images to <img> with alt text
+- Description: Replace background images with <img> elements for accessibility.
+- Info Needed:
+Alt text for each project image: 
+
+6. Add Open Graph and SEO meta tags
+- Description: Add title, description, og:image, and Twitter card tags in `index.html`.
+- Info Needed:
+Site title: 
+Site description: 
+OG image filename (in public/): 
+
+7. Add a concise hero tagline and availability update
+- Description: Refine hero copy to be sharper and role-specific.
+- Info Needed:
+Preferred role title (e.g., Full-stack Developer): 
+Availability statement (e.g., Open to new roles): 
+
+8. Add a short “Services” section
+- Description: Add a section describing 3–4 services you offer.
+- Info Needed:
+Service list (3–4 items): 
+
+9. Add a “Featured Case Study” section
+- Description: Spotlight one project with problem/solution/result.
+- Info Needed:
+Project name: 
+Problem statement: 
+Solution summary: 
+Result/impact: 
+
+10. Improve contact form behavior
+- Description: Decide between mailto or form handler and implement.
+- Info Needed:
+Preferred option (mailto / form handler): 
+If form handler, which provider (Netlify/Formspark/etc.): 
+
+11. Add Resume link to navigation (mobile/desktop)
+- Description: Ensure Resume is accessible from main nav and footer.
+- Info Needed:
+Same as Task 1 (confirm label/location): 
+
+12. Add Skills tooling/testing items
+- Description: Expand skills list with testing/tooling if applicable.
+- Info Needed:
+Testing tools used (e.g., Jest, Vitest, Playwright): 
+Other tools to highlight: 
+
+13. Add work experience details
+- Description: Add another role or expand responsibilities with concrete tools.
+- Info Needed:
+Additional role title: 
+Company: 
+Dates: 
+Responsibilities: 
+Achievements: 
+
+14. Add Education details (optional)
+- Description: Add honors, coursework, or certifications.
+- Info Needed:
+Honors/certifications: 
+Relevant coursework: 
+
+15. Add README.md
+- Description: Create a project README with setup, dev, and deployment.
+- Info Needed:
+Deployment target (Netlify/Vercel/Other): 
+
+16. Add analytics (optional)
+- Description: Add a lightweight analytics snippet.
+- Info Needed:
+Provider (Plausible/GA/Umami/etc.): 
+Tracking ID: 
+
+17. Add favicon and app icons
+- Description: Add favicon and update link in `index.html`.
+- Info Needed:
+Favicon file name(s): 
+
+18. Add error-free form validation states
+- Description: Add basic client-side validation feedback.
+- Info Needed:
+Validation rules (required fields, email format, etc.): 
+
+19. Add testimonials (optional)
+- Description: Add 2–3 short testimonials or endorsements.
+- Info Needed:
+Testimonial text + author: 
+
+20. Add deployment checklist section
+- Description: Document final deployment steps and QA checklist.
+- Info Needed:
+Hosting provider and domain: 

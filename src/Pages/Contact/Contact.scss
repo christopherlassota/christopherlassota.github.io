@@ -10,6 +10,17 @@
         max-width: 48rem;
     }
 
+    &__email,
+    &__note {
+        max-width: 48rem;
+    }
+
+    &__email-link {
+        color: $primary-text;
+        text-decoration: underline;
+        text-underline-offset: 0.2rem;
+    }
+
     &__form {
         width: 100%;
         max-width: 40rem;

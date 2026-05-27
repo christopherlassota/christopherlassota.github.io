@@ -16,8 +16,8 @@ const Footer = () => {
       <section className="footer__left">
         <h3 className="footer__title">Christopher Lassota</h3>
         <p className="footer__description">
-          Full-stack web developer passionate about creating exceptional web
-          experiences. Specializing in react.js and modern web technologies
+          Software developer and engineering student building practical web
+          applications with React, TypeScript, Node.js, and SQL.
         </p>
         <ul className="footer__icon-list">
           <IconContext.Provider value={{ color: "#5E5E5E", size: "24px" }}>

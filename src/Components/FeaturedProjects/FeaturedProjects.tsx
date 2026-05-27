@@ -7,8 +7,8 @@ const FeaturedProjects = () => {
     <section className="featuredprojects">
       <h2 className="featuredprojects__title">Featured Projects</h2>
       <h3 className="featuredprojects__subtitle">
-        A selection of my projects that showcase my expertise and passion for
-        development
+        Selected project work focused on practical interfaces, responsive
+        layouts, and clear data flows.
       </h3>
       <div className="featuredprojects__card-container">
         {featured.map((project) => (

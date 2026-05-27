@@ -16,20 +16,19 @@ const Hero = () => {
     <section className="hero">
       <div className="hero__picture"></div>
       <h1 className="hero__title">Christopher Lassota</h1>
-      <h2 className="hero__subtitle">
-        Building Intuitive, User-focused applications
-      </h2>
+      <h2 className="hero__subtitle">Software Developer & Engineering Student</h2>
       <p className="hero__summary">
-        I recently completed an intensive software development bootcamp, where I
-        gained hands-on experience in full-stack development using React,
-        Node.js, and SQL. My background includes diverse roles from teaching
-        abroad to working in quality control labs, which shaped my adaptability,
-        communication, and problem-solving skills. I'm especially drawn to
-        collaborative environments where I can keep learning, contribute to
-        meaningful projects, and grow as a developer.
+        I build practical web applications with React, TypeScript, Node.js, and
+        SQL. My background in science, technical documentation, and teaching has
+        shaped how I approach problem-solving: clearly, carefully, and with the
+        user in mind. I'm currently transitioning into engineering and looking
+        for opportunities where I can contribute, learn quickly, and solve real
+        technical problems.
       </p>
       <article className="hero__availability">
-        <h3 className="hero__subtitle">Available for new projects</h3>
+        <h3 className="hero__subtitle">
+          Open to software, technical, and engineering-adjacent opportunities
+        </h3>
       </article>
       <article className="hero__actions">
         <div className="hero__buttons">

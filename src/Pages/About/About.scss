@@ -4,6 +4,16 @@
 .about {
     @include flex-center(column);
     @include page-padding;
+
+    &__subtitle,
+    &__intro {
+        max-width: 56rem;
+        text-align: center;
+    }
+
+    &__intro {
+        margin-bottom: 2rem;
+    }
 }
 
 .education {

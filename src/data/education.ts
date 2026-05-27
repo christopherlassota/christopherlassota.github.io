@@ -9,6 +9,15 @@ export type EducationEntry = {
 
 export const education: EducationEntry[] = [
   {
+    id: "ucalgary-engineering",
+    school: "University of Calgary",
+    logo: "UCalgary",
+    degree: "Bachelor of Science in Engineering",
+    dates: "Starting Fall 2026",
+    description:
+      "Beginning the common first-year engineering program with an interest in electrical engineering, technical systems, and software-driven problem-solving.",
+  },
+  {
     id: "mru-bsc",
     school: "Mount Royal University",
     logo: "MRU",
