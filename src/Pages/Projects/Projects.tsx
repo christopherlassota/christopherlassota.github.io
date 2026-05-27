@@ -1,5 +1,6 @@
 import "./Projects.scss";
 import { projects } from "../../data/projects";
+import ProjectCard from "../../Components/ProjectCard/ProjectCard";
 
 const Projects = () => {
   return (
@@ -11,21 +12,11 @@ const Projects = () => {
       </p>
       <div className="projects__grid">
         {projects.map((project) => (
-          <article key={project.id} className="projects__card">
-            <div
-              className="projects__image"
-              style={{ backgroundImage: `url(${project.image})` }}
-            ></div>
-            <h3 className="projects__card-title">{project.title}</h3>
-            <p className="projects__card-description">{project.description}</p>
-            <ul className="projects__taglist">
-              {project.tags.map((tag) => (
-                <li key={`${project.id}-${tag}`} className="projects__tag">
-                  {tag}
-                </li>
-              ))}
-            </ul>
-          </article>
+          <ProjectCard
+            key={project.id}
+            project={project}
+            classNamePrefix="projects"
+          />
         ))}
       </div>
     </section>

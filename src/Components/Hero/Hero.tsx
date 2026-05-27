@@ -32,11 +32,11 @@ const Hero = () => {
       </article>
       <article className="hero__actions">
         <div className="hero__buttons">
-          <Link to="/contact" className="hero__link">
-            <button className="hero__button">Get in Touch</button>
+          <Link to="/contact" className="hero__button">
+            Get in Touch
           </Link>
-          <Link to="/projects" className="hero__link">
-            <button className="hero__button">View My Work</button>
+          <Link to="/projects" className="hero__button">
+            View My Work
           </Link>
         </div>
         <div className="hero__icons">

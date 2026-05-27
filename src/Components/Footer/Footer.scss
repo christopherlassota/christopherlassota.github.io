@@ -48,6 +48,10 @@
         @include flex-center(row);
         text-decoration: none;
     }
+
+    &__icon-link {
+        display: inline-flex;
+    }
     &__quicklink-list {
         @include flex-center(column, flex-start, flex-start);
         gap: 1rem;

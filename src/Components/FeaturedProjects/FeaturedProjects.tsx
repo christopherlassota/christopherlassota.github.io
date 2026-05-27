@@ -1,5 +1,6 @@
 import "./FeaturedProjects.scss";
 import { projects } from "../../data/projects";
+import ProjectCard from "../ProjectCard/ProjectCard";
 
 const FeaturedProjects = () => {
   const featured = projects.filter((project) => project.featured);
@@ -12,23 +13,12 @@ const FeaturedProjects = () => {
       </h3>
       <div className="featuredprojects__card-container">
         {featured.map((project) => (
-          <article key={project.id} className="featuredprojects__card">
-            <div
-              className="featuredprojects__image"
-              style={{ backgroundImage: `url(${project.image})` }}
-            ></div>
-            <h4 className="featuredprojects__card-title">{project.title}</h4>
-            <p className="featuredprojects__card-description">
-              {project.description}
-            </p>
-            <ul className="featuredprojects__taglist">
-              {project.tags.map((tag) => (
-                <li key={`${project.id}-${tag}`} className="featuredprojects__tag">
-                  {tag}
-                </li>
-              ))}
-            </ul>
-          </article>
+          <ProjectCard
+            key={project.id}
+            project={project}
+            classNamePrefix="featuredprojects"
+            titleAs="h4"
+          />
         ))}
       </div>
     </section>
