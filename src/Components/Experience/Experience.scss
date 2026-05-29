@@ -2,7 +2,10 @@
 @use "../../styles/mixins" as *;
 
 .experience {
+    @include flex-center(column, flex-start, stretch);
+    gap: 1.25rem;
     text-align: center;
+    width: 100%;
 
     &__card {
         @include glass-card;
@@ -22,9 +25,10 @@
 
     &__date {
         background-color: black;
+        display: inline-block;
         padding: 0.5rem;
         margin: 1rem 0;
-        width: 100%;
+        width: fit-content;
 
         @include tablet {
             position: absolute;
@@ -37,7 +41,7 @@
 
     &__list {
         @include flex-center(column, flex-start, flex-start);
-        gap: 1rem
+        gap: 0.5rem;
     }
 
     &__section {

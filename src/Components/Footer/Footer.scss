@@ -36,8 +36,8 @@
         font-weight: 500
     }
     &__icon-list {
-        @include flex-center(row, space-between, space-between);
-        width: 100%;
+        @include flex-center(row, flex-start, center);
+        gap: 1rem;
 
         @include desktop {
             @include flex-center(row, flex-start);

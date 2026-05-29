@@ -54,6 +54,7 @@
         border: 1px solid white;
         color: white;
         text-align: center;
+        @include button-interaction;
 
         @include tablet {
             @include flex-center(row);

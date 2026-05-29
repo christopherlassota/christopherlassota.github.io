@@ -1,5 +1,5 @@
 import "./Invitations.scss";
-import { Link } from "react-router-dom";
+import { DelayedLink } from "../DelayedLink/DelayedLink";
 
 const Invitation = () => {
   return (
@@ -10,9 +10,9 @@ const Invitation = () => {
           opportunities. Flexible with remote, async and agile workflows.
           Comfortable working across time zones and with distributed teams.
         </h4>
-        <Link to="/contact" className="invitation__link">
-          <button className="invitation__button">Contact Me</button>
-        </Link>
+        <DelayedLink to="/contact" className="invitation__button">
+          <span>Contact Me</span>
+        </DelayedLink>
     </section>
   );
 };

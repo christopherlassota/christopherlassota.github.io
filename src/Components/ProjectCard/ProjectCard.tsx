@@ -10,10 +10,17 @@ const ProjectCard = ({ project, classNamePrefix, titleAs = "h3" }: ProjectCardPr
   const TitleTag = titleAs;
   return (
     <article className={`${classNamePrefix}__card`}>
-      <div
-        className={`${classNamePrefix}__image`}
-        style={{ backgroundImage: `url(${project.image})` }}
-      ></div>
+      {project.image ? (
+        <div
+          className={`${classNamePrefix}__image`}
+          style={{ backgroundImage: `url(${project.image})` }}
+        ></div>
+      ) : (
+        <div
+          className={`${classNamePrefix}__image ${classNamePrefix}__image--placeholder`}
+          aria-hidden="true"
+        ></div>
+      )}
       <TitleTag className={`${classNamePrefix}__card-title`}>{project.title}</TitleTag>
       <p className={`${classNamePrefix}__card-description`}>{project.description}</p>
       <ul className={`${classNamePrefix}__taglist`}>

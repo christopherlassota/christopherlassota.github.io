@@ -11,9 +11,9 @@ export const education: EducationEntry[] = [
   {
     id: "ucalgary-engineering",
     school: "University of Calgary",
-    logo: "UCalgary",
+    logo: "UofC",
     degree: "Bachelor of Science in Engineering",
-    dates: "Starting Fall 2026",
+    dates: "2026 - 2030",
     description:
       "Beginning the common first-year engineering program with an interest in electrical engineering, technical systems, and software-driven problem-solving.",
   },

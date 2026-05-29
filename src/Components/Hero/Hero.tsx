@@ -3,7 +3,7 @@ import { BsGithub } from "react-icons/bs";
 import { BsLinkedin } from "react-icons/bs";
 import { IconContext } from "react-icons";
 import type { IconType } from "react-icons";
-import { Link } from "react-router-dom";
+import { DelayedLink } from "../DelayedLink/DelayedLink";
 import { socialLinks, type SocialLinkId } from "../../data/socialLinks";
 
 const socialIconById: Record<SocialLinkId, IconType> = {
@@ -32,12 +32,12 @@ const Hero = () => {
       </article>
       <article className="hero__actions">
         <div className="hero__buttons">
-          <Link to="/contact" className="hero__button">
-            Get in Touch
-          </Link>
-          <Link to="/projects" className="hero__button">
-            View My Work
-          </Link>
+          <DelayedLink to="/contact" className="hero__button">
+            <span>Get in Touch</span>
+          </DelayedLink>
+          <DelayedLink to="/projects" className="hero__button">
+            <span>View My Work</span>
+          </DelayedLink>
         </div>
         <div className="hero__icons">
           <IconContext.Provider value={{ color: "#5E5E5E", size: "24px" }}>

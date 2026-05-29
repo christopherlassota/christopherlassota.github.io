@@ -5,28 +5,73 @@
     @include flex-center(row, space-between);
     @include page-padding;
     border-bottom: 1px solid white;
+    position: relative;
+
+    @include desktop {
+        display: grid;
+        grid-template-columns: 1fr auto 1fr;
+        align-items: center;
+    }
 
     &__logo {
         background-color: black;
         border: 1px solid white;
         padding: 0.5rem;
+        width: fit-content;
+
+        @include desktop {
+            justify-self: start;
+        }
     }
 
-    // &__navigation {}
+    &__navigation {
+        @include flex-center(row, flex-end);
+    }
+
     &__waffle {
+        @include flex-center(row);
+        background-color: black;
+        border: 1px solid white;
+        color: white;
+        padding: 0.5rem;
+        @include button-interaction;
+
         @include desktop {
             display: none;
         }
     }
+
     &__nav-list {
         display: none;
-        gap: 0.5rem;
+        gap: 1rem;
+
+        &--open {
+            @include flex-center(column, flex-start, flex-start);
+            position: absolute;
+            top: 100%;
+            right: 2rem;
+            z-index: 5;
+            width: min(16rem, calc(100% - 4rem));
+            padding: 1rem;
+            background-color: black;
+            border: 1px solid white;
+        }
 
         @include desktop {
             @include flex-center;
+            position: static;
+            width: auto;
+            padding: 0;
+            background-color: transparent;
+            border: 0;
         }
     }
-    // &__nav-link {}
+
+    &__nav-link {
+        display: inline-block;
+        padding: 0.25rem 0;
+    }
+
     &__contact {
         display: none;
         
@@ -35,7 +80,10 @@
             gap: 0.5rem;
             background-color: black;
             border: 1px solid white;
+            color: white;
             padding: 0.5rem;
+            justify-self: end;
+            @include button-interaction;
         }
     }
 }

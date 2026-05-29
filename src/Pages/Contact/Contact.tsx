@@ -42,7 +42,7 @@ const Contact = () => {
           />
         </label>
         <button className="contact__button" type="submit">
-          Send Message
+          <span>Send Message</span>
         </button>
       </form>
     </section>

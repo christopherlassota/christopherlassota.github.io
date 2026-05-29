@@ -3,44 +3,71 @@ import { BsList } from "react-icons/bs";
 import { BsEnvelope } from "react-icons/bs";
 import { IconContext } from "react-icons";
 import { Link } from "react-router-dom";
+import { useState } from "react";
+import { DelayedLink } from "../DelayedLink/DelayedLink";
 
+const navLinks = [
+  { label: "Home", to: "/" },
+  { label: "About", to: "/about" },
+  { label: "Projects", to: "/projects" },
+  { label: "Contact", to: "/contact" },
+];
 
 const Header = () => {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  const closeMenu = () => setIsMenuOpen(false);
+
   return (
-    <section className="header">
-      <div className="header__logo">
+    <header className="header">
+      <Link className="header__logo" to="/" onClick={closeMenu}>
         <p className="header__logo-text">CL</p>
-      </div>
+      </Link>
       <nav className="header__navigation">
-        <div className="header__waffle">
-          <IconContext.Provider value={{ color: "white", size: "24px" }}>
+        <button
+          className="header__waffle"
+          type="button"
+          aria-controls="primary-navigation"
+          aria-expanded={isMenuOpen}
+          aria-label="Toggle navigation menu"
+          onClick={() => setIsMenuOpen((current) => !current)}
+        >
+          <IconContext.Provider value={{ size: "24px" }}>
             <BsList />
           </IconContext.Provider>
-        </div>
-        <ul className="header__nav-list">
-            <li>
-              <Link className="header__nav-link" to="/">Home</Link>
+        </button>
+        <ul
+          id="primary-navigation"
+          className={`header__nav-list${
+            isMenuOpen ? " header__nav-list--open" : ""
+          }`}
+        >
+          {navLinks.map((link) => (
+            <li key={link.to}>
+              <Link
+                className="header__nav-link"
+                to={link.to}
+                onClick={closeMenu}
+              >
+                {link.label}
+              </Link>
             </li>
-            <li>
-              <Link className="header__nav-link" to="/about">About</Link>
-            </li>
-            <li>
-              <Link className="header__nav-link" to="/projects">Projects</Link>
-            </li>
-            <li>
-              <Link className="header__nav-link" to="/contact">Contact</Link>
-            </li>
+          ))}
         </ul>
       </nav>
-      <Link className="header__contact" to="/contact">
-        <IconContext.Provider value={{color: "white", size:"24px"}}>
+      <DelayedLink
+        className="header__contact"
+        onNavigateStart={closeMenu}
+        to="/contact"
+      >
+        <IconContext.Provider value={{ size:"24px"}}>
             <BsEnvelope />
         </IconContext.Provider>
         <p className="header__contact-text">
             Let's Talk
         </p>
-      </Link>
-    </section>
+      </DelayedLink>
+    </header>
   );
 };
 

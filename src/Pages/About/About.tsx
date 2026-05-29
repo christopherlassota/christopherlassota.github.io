@@ -14,28 +14,30 @@ const About = () => {
             </p>
             <Experience />
             <section className="education">
-                    <h2 className="education__title">
-                        Education
-                    </h2>
-                {education.map((item) => (
-                    <article key={item.id} className="education__card">
-                        <div className="education__card-top">
-                            <p className="education__logo">
-                                {item.logo}
-                            </p>
-                            <div className="education__information">
-                                <h3 className="education__degree">
-                                    {item.degree}
-                                </h3>
-                                <h4 className="education__institute">
-                                    {item.school}
-                                </h4>
-                                <p className="education__date">{item.dates}</p>
+                <h2 className="education__title">
+                    Education
+                </h2>
+                <div className="education__grid">
+                    {education.map((item) => (
+                        <article key={item.id} className="education__card">
+                            <div className="education__card-top">
+                                <p className="education__logo">
+                                    {item.logo}
+                                </p>
+                                <div className="education__information">
+                                    <h3 className="education__degree">
+                                        {item.degree}
+                                    </h3>
+                                    <h4 className="education__institute">
+                                        {item.school}
+                                    </h4>
+                                    <p className="education__date">{item.dates}</p>
+                                </div>
                             </div>
-                        </div>
-                        <p className="education__description">{item.description}</p>
-                    </article>
-                ))}
+                            <p className="education__description">{item.description}</p>
+                        </article>
+                    ))}
+                </div>
             </section>
         </section>
     )

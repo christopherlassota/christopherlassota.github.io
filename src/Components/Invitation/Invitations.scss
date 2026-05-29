@@ -11,16 +11,18 @@
         gap: 2rem;
     }
 
+    &__link {
+        width: fit-content;
+    }
+
     &__button {
         @include flex-center;
         color: white;
         background-color: black;
-        width: 100%;
-        padding: 0.5rem;
+        width: fit-content;
+        padding: 0.5rem 1.5rem;
         border: 1px solid white;
-
-        @include tablet {
-            width: 30%;
-        }
+        white-space: nowrap;
+        @include button-interaction;
     }
 }
